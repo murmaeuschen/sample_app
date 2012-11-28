@@ -7,17 +7,13 @@ SampleApp::Application.routes.draw do
     resources :comments
   end
 
-  get "posts/:id" => "posts#show"
-
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
  
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
-  match '/posts',   :to => 'pages#posts'
-
-  
+    
   root :to => 'pages#home'
 
   # The priority is based upon order of creation:

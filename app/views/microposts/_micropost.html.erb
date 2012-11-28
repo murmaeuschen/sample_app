@@ -12,7 +12,7 @@
                                      :confirm => "You sure?",
                                      :title => micropost.content %>     
     <% else %>
-    <%= link_to "comment", :controller => :microposts, :action => :show, :id => micropost.id %>    
+    <%= link_to "comments", :controller => :microposts, :action => :show, :id => micropost.id %>    
     <% end %>
   </td>
 </tr>
