@@ -5,7 +5,7 @@ gem 'rails', '3.2.9'
 
 gem 'execjs'
 
-gem 'therubyracer'
+#gem 'therubyracer'
 
 #gem 'rails', '3.0.9'
 #gem 'sqlite3', '1.3.3'
@@ -14,6 +14,7 @@ gem 'gravatar_image_tag', '1.0.0.pre2'
 gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 
 group :development do
+  gem 'therubyracer', :platforms => :ruby
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
