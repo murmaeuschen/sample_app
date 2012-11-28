@@ -19,6 +19,17 @@ group :development do
   gem 'faker', '0.3.1'
 end
 
+##############
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
+#######
+
 group :test do
   gem 'rspec-rails', '2.6.1'
   gem 'webrat', '0.7.1'
@@ -30,7 +41,7 @@ end
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+#gem 'sqlite3'
 
 
 # Gems used only for assets and not required
