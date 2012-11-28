@@ -18,6 +18,19 @@ class MicropostsController < ApplicationController
     redirect_back_or root_path
   end
 
+  def show
+    @micropost = Micropost.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @micropost}
+    end
+  end
+
+  def index
+    @title = "All posts"
+    @microposts = Micropost.paginate(:page => params[:page])
+  end
+
   private
 
     def authorized_user

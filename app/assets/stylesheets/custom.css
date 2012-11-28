@@ -244,4 +244,8 @@ form.new_micropost textarea {
   margin-bottom: 0;
 }
 
+form.new_comment textarea {
+  height: 4em;
+  margin-bottom: 0;  
+}
 

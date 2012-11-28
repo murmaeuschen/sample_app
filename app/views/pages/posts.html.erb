@@ -1,0 +1,26 @@
+<h1>All posts</h1>
+
+<table>
+  <tr>
+    <th>Post</th>
+    <th>User</th>    
+  </tr>
+
+<% @microposts = Micropost.all %>
+     <% @microposts.each do |post| %>
+     <tr>
+     <td><%= post.content %></td>
+     <td><%= post.user_id %></td>    
+   </tr>
+<% end %>
+
+</table>
+
+
+
+
+
+
+
+
+

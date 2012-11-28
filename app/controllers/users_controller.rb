@@ -8,6 +8,10 @@ class UsersController < ApplicationController
     @users = User.paginate(:page => params[:page])
   end
 
+  def all_posts
+    @title = "All posts"    
+  end
+
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(:page => params[:page])
@@ -23,7 +27,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
        sign_in @user
-       flash[:success] = "Welcome to the Sample App!"
+       flash[:success] = "Welcome to my blog!"
        redirect_to @user
     else
       @title = "Sign up"

@@ -1,0 +1,9 @@
+<ul class="users">  
+<li>
+  <%= gravatar_for current_user, :size => 30 %>
+  <%= link_to current_user.name, current_user %>
+  <br>
+  <%= comment.body %>
+</li>  
+</ul>
+

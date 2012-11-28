@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation
 
   has_many :microposts, :dependent => :destroy
+  has_many :comments, :dependent => :destroy
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -35,7 +36,7 @@ class User < ActiveRecord::Base
   end
 
   def feed
-      # Это предварительное решение. См. полную реализацию в Главе 12.
+      # Это предварительное решение. 
       Micropost.where("user_id = ?", id)
   end
 
